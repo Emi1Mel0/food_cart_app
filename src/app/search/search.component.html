@@ -1,0 +1,13 @@
+<div class="contianer">
+  <input
+    type="text"
+    placeholder="search food mine!"
+    [(ngModel)]="searchTerm"
+    (change)="search()"
+  />
+  <!-- the binding is from the component to the view -->
+  <button type="button" (click)="search()">search</button>
+  <!-- the change and click event is for the same purpose but
+    is better to has a both way by pressing enter through keyboard
+    and the other by mouse-->
+</div>
