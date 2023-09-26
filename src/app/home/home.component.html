@@ -1,8 +1,55 @@
+<!-- <link rel="stylesheet" href="node_modules/css-star-rating/css/star-rating.css"> -->
 <div class="container">
+  <app-search></app-search>
   <ul>
     <li *ngFor="let food of foods">
       <a>
-        <img src="{{ food }}" alt="" />
+        <img src="{{ food.imageUrl }}" alt="" />
+        <div class="content">
+          <div class="name">
+            {{ food.name }}
+          </div>
+          <span class="favorite {{ food.favorite ? '' : 'not' }}">❤</span>
+          <!-- <star-rating [starType]="'svg'" [rating]="2"></star-rating> -->
+          <!-- <star-rating-comp rating="'3.0'"></star-rating-comp> -->
+          <!-- <div class="rating large star-icon direction-rtl value-1 half color-default label-top">
+            <div class="label-value">1.5</div>
+             <div class="star-container">
+                 <div class="star">
+                     <i class="star-empty"></i>
+                     <i class="star-half"></i>
+                     <i class="star-filled"></i>
+                 </div>
+                 <div class="star">
+                     <i class="star-empty"></i>
+                     <i class="star-half"></i>
+                     <i class="star-filled"></i>
+                 </div>
+                 <div class="star">
+                     <i class="star-empty"></i>
+                     <i class="star-half"></i>
+                     <i class="star-filled"></i>
+                 </div>
+             </div>
+         </div> -->
+          <div class="product-item-footer">
+            <div class="origins">
+              <span *ngFor="let origin of food.origins">
+                {{ origin }}
+              </span>
+            </div>
+            <div class="cook-time">
+              <span>🕔</span>
+              {{ food.cookTime }}
+            </div>
+          </div>
+
+          <div class="price">
+            <span>
+              {{ food.price | currency }}
+            </span>
+          </div>
+        </div>
       </a>
     </li>
   </ul>
