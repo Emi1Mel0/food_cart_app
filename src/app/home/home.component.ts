@@ -29,12 +29,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this._ActivatedRoute.params.subscribe((params) => {
       if (params['searchTerm'])
-        this.foods = this._FoodService
-          .getAll()
-          .filter((food) =>
-            food.name.toLowerCase().includes(params['searchTerm'].toLowerCase())
-          );
-      else this.foods = this._FoodService.getAll();
+        this.foods = this._FoodService.getAllFoodsBySearchTerm(params['searchTerm']);
+     else if (params['tag'])
+     this.foods = this._FoodService.getAllFoodsByTag(params['tag']);
+          else this.foods = this._FoodService.getAll();
     });
   }
 }
