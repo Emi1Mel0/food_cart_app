@@ -10,10 +10,11 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { TagsComponent } from './tags/tags.component';
 import { DetailsComponent } from './details/details.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent,
-    HomeComponent, SearchComponent, TagsComponent, DetailsComponent],
+    HomeComponent, SearchComponent, TagsComponent, DetailsComponent, CartComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
