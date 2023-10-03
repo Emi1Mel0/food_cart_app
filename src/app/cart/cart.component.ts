@@ -10,7 +10,9 @@ import { cartItem } from '../shared/models/cartitem';
 })
 export class CartComponent implements OnInit {
   cart!: cart;
-  constructor(private _CartService: CartService) {}
+  constructor(private _CartService: CartService) {
+    this.setCart();
+  }
 
   ngOnInit(): void {}
 
