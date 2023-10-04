@@ -11,10 +11,11 @@ import { FormsModule } from '@angular/forms';
 import { TagsComponent } from './tags/tags.component';
 import { DetailsComponent } from './details/details.component';
 import { CartComponent } from './cart/cart.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent,
-    HomeComponent, SearchComponent, TagsComponent, DetailsComponent, CartComponent],
+    HomeComponent, SearchComponent, TagsComponent, DetailsComponent, CartComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
